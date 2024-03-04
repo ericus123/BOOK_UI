@@ -1,8 +1,10 @@
+"use client";
 
-export default function Home() {
-  return (
-  <div>
-    
-  </div>
-  );
-}
+import Contacts from "../components/contacts";
+import withAuthProtection from "../components/hoc/withAuthProtection";
+
+const Home = () => {
+  return <Contacts />;
+};
+
+export default withAuthProtection(Home);

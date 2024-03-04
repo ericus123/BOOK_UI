@@ -1,0 +1,26 @@
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: rgb(131, 26, 229);
+  --sb-size: 5px;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
